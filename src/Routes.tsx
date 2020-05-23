@@ -9,7 +9,7 @@ import {
 
 export const RoutesComponent: React.FC = () => (
   <Suspense fallback="Loading">
-    <Router>
+    <Router basename="/encryptor">
       <Switch>
         <Redirect from="/" to="/encrypt" exact />
         <Route exact path="/encrypt" component={lazy(() => import('pages/Encrypt'))} />

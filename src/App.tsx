@@ -9,10 +9,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <a href="/">
+        <a href="/encryptor">
           <img src={logo} className="App-logo" alt="logo" />
         </a>
-        <a href="/">
+        <a href="/encryptor">
           <b>Encryptor</b>
         </a>
       </header>
