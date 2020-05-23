@@ -20,7 +20,7 @@ class Encryption {
     this.cipher = crypto.createCipheriv(algorithm, key, iv);
     this.decipher = crypto.createDecipheriv(algorithm, key, iv);
   }
-  encrypt(data: string) {
+  encrypt(data: string): Promise<Buffer> {
     return new Promise((resolve, reject) => {
       try {
         const encrypted = Buffer.concat([
@@ -34,7 +34,7 @@ class Encryption {
     });
   }
 
-  decrypt(data: NodeJS.ArrayBufferView) {
+  decrypt(data: NodeJS.ArrayBufferView): Promise<Buffer> {
     return new Promise((resolve, reject) => {
       try {
         const decrypted = Buffer.concat([

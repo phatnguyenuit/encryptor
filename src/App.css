@@ -14,8 +14,11 @@
 }
 
 .App-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 7vh;
   background-color: #282c34;
-  min-height: 5vh;
 }
 
 .App-main {
@@ -27,8 +30,20 @@
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
+}
+
+.form-control {
+  display: grid;
+  grid-template-columns: 0.22fr 1fr 1fr auto;
+  grid-gap: 8px;
+  margin-bottom: 16px;
+}
+
+.form-buttons {
+  display: grid;
+  grid-template-columns: 0.125fr 0.125fr 1fr auto;
+  grid-gap: 8px;
 }
